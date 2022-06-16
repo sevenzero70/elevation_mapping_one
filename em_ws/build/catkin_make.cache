@@ -1,0 +1,2 @@
+elevation_mapping/elevation_mapping:elevation_mapping/elevation_mapping_demos:kindr:kindr_msgs:kindr_ros:kindr_rviz_plugins:multi_dof_joint_trajectory_rviz_plugins:point_cloud_io-master:realsense-ros/realsense2_camera:realsense-ros/realsense2_description
+-DCATKIN_DEVEL_PREFIX=/home/zero/ETH/em_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zero/ETH/em_ws/install -G Unix Makefiles

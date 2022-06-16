@@ -1,0 +1,28 @@
+Performing C++ SOURCE FILE Test LIBATOMIC_NOT_NEEDED failed with the following output:
+Change Dir: /home/zero/ETH/pcl/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9e3a7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9e3a7.dir/build.make CMakeFiles/cmTC_9e3a7.dir/build
+make[1]: 进入目录“/home/zero/ETH/pcl/release/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_9e3a7.dir/src.cxx.o
+/usr/bin/c++    -DLIBATOMIC_NOT_NEEDED   -std=c++14 -o CMakeFiles/cmTC_9e3a7.dir/src.cxx.o -c /home/zero/ETH/pcl/release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_9e3a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e3a7.dir/link.txt --verbose=1
+/usr/bin/c++   -DLIBATOMIC_NOT_NEEDED    CMakeFiles/cmTC_9e3a7.dir/src.cxx.o  -o cmTC_9e3a7 
+CMakeFiles/cmTC_9e3a7.dir/src.cxx.o：在函数‘std::atomic<big>::load(std::memory_order) const’中：
+src.cxx:(.text._ZNKSt6atomicI3bigE4loadESt12memory_order[_ZNKSt6atomicI3bigE4loadESt12memory_order]+0x67)：对‘__atomic_load’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9e3a7.dir/build.make:97: recipe for target 'cmTC_9e3a7' failed
+make[1]: *** [cmTC_9e3a7] Error 1
+make[1]: 离开目录“/home/zero/ETH/pcl/release/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_9e3a7/fast' failed
+make: *** [cmTC_9e3a7/fast] Error 2
+
+Source file was:
+
+#include <atomic>
+struct big { int foo[64]; };
+std::atomic<big> x;
+int main() {
+   return x.load().foo[13];
+}

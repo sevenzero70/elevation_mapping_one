@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zero/ETH/pcl/io/tools/ply/plyheader.cpp
+fstream
+-
+iostream
+-
+cstring
+-
+string
+-
+cstdlib
+-
+

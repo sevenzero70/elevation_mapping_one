@@ -1,0 +1,8 @@
+prefix=/home/zero/ETH/em_ws1.0/install
+
+Name: kindr_rviz_plugins
+Description: Description of kindr_rviz_plugins
+Version: 0.3.6
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lkindr_rviz_plugins
+Requires: rviz kindr_msgs

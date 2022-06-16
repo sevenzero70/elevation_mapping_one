@@ -1,0 +1,8 @@
+prefix=/home/zero/ETH/em_ws/devel
+
+Name: point_cloud_io
+Description: Description of point_cloud_io
+Version: 0.3.6
+Cflags: -I/home/zero/ETH/em_ws/src/point_cloud_io-master/include
+Libs: -L${prefix}/lib 
+Requires: pcl_ros roscpp sensor_msgs
